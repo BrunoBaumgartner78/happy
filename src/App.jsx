@@ -28,13 +28,21 @@ export default function App() {
       <div className="card">
         <h1>🎉 Happy Birthday, Teal Swan! 🎉</h1>
         <p>Wishing you a wonderful day full of joy, love, and cake! 🍰</p>
-        <img src="/happy/teals birthday.webp" alt="Birthday cake" className="cake" />
+        <img
+          src={process.env.PUBLIC_URL + '/teals birthday.webp'}
+          alt="Birthday cake"
+          className="cake"
+        />
         <button onClick={handleClick}>Click me 🎁</button>
         {showGift && (
           <p className="surprise">🎈 Surprise! You're getting lots of love! ❤️</p>
         )}
         {/* Verstecktes Audio-Element */}
-        <audio ref={audioRef} src="/happy/happy-birthday.mp3" preload="auto" />
+        <audio
+          ref={audioRef}
+          src={process.env.PUBLIC_URL + '/happy-birthday.mp3'}
+          preload="auto"
+        />
       </div>
     </div>
   );
